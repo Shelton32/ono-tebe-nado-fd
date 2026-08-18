@@ -5,26 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Оно тебе надо — аукцион вещей, в которые никто не верил</title>
-    
     <link rel="stylesheet" href="fonts/fonts.css">
     <link rel="stylesheet" href="styles/global.css">
     <link rel="stylesheet" href="styles/style.css">
-
-
   </head>
   <body>
   <header class="header">
     <nav class="header__menu">
 <!--      В хедере делаем список из ссылок -->
-      <ul>
-        <li>
+      <ul class="menu__item">
+        <li >
           <a class="header__menu-item" href="#">главная</a>
         </li>
         <li>
           <a class="header__menu-item" href="#">посмотреть лоты</a>
         </li>
         <li>
-          <a class="header__menu-item" href="#">об аукционе</a>
+          <a class="header__menu-item">об аукционе</a>
         </li>
       </ul>
 <!--      Логотип сайта в хедере-->
@@ -33,12 +30,12 @@
       </div>
 <!--      В хедере блок с телефоно, почтой и адресом -->
       <address class="header__address">
-        <ul>
+        <ul class="address__list">
           <li>
-            <a class="footer__menu-adress" href="#">+9 999 555 5555</a>
+            <a class="footer__menu-adress" href="tel:+99995555555">+9 999 555 5555</a>
           </li>
           <li>
-            <a class="footer__menu-adress" href="#">info@sobaka.ge</a>
+            <a class="footer__menu-adress" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
           </li>
           <li>
             <p class="footer__menu-adress">наб. Принсенграхт 263-265, Амстердам</p>
@@ -50,13 +47,17 @@
   <main>  
 <!--    Н1 для первой секции-->
     <section class="main__cover">
-      <h1 class="cover__main">Оно</h1>
-      <h1 class="cover__main">Тебе</h1>
-      <h1 class="cover__main">Надо</h1>
+      <div class="overlay">
+        <h1 class="cover__title">
+          <span class="accent-span">Оно</span>
+          <span class="accent-span text-center">Тебе</span>
+          <span class="accent-span text-right">Надо</span>
+        </h1>
       <!--      Нижняя надпись + кнопка-->
-      <div class="description">
-        <p class="description__abzac">Аукцион вещей в которые никто не верил</p>
-        <button class="description__button">Сделать ставку</button>
+        <div class="description">
+          <p class="description__abzac">Аукцион вещей. в которые никто не верил</p>
+          <button class="description__button">Сделать ставку</button>
+        </div>
       </div>
     </section>
 <!--    Вторая секция для создания лотов-->
@@ -65,22 +66,21 @@
 <!--      Лот 1-->
       <ul class="lots__list">
         <li class="lots__item-film">
-          <a class="lots__link" href="#">
             <article class="lots__article">
-              <img src="images/card-lot-01.jpg" alt="Девушка держит зеркало пока парень расчесывается">
+                <div class="overlay"></div>
+<!--              <img src="images/card-lot-01.jpg" alt="Девушка держит зеркало пока парень расчесывается">-->
               <h3 class="lots__card-title">Фильм режиссёра, который бросил киношколу</h3>
               <p class="lots__card-text">Не просто бросил, а ушёл с первой лекции. 
                 Какой была бы ваша ставка,
                 если бы вы не знали, что режиссёр — Пол Томас Андерсон?
               </p>
             </article>
-          </a>
         </li>
 <!--        Лот 2-->
-        <li class="lots__item-books">
-          <a href="#">
+        <li class="lots__item-book">
             <article class="lots__article">
-              <img src="images/card-lot-02.jpg" alt="Обложка книги джеймс Джойса 'Иностранка' ">
+                <div class="overlay"></div>
+<!--              <img src="images/card-lot-02.jpg" alt="Обложка книги джеймс Джойса 'Иностранка' ">-->
               <h3 class="lots__card-title">Книга, где описан один скучный день из жизни рекламного агента</h3>
               <p class="lots__card-text">
                 Объёмом почти в тысячу страниц. Иногда без знаков препинания и с переходами на древнеанглийский. 
@@ -89,13 +89,12 @@
                 Сколько бы вы поставили на «Улисса» Джеймса Джойса?
               </p>
             </article>
-          </a>
         </li>
 <!--        Лот 3-->
-        <li class="lots__item-pictures">
-          <a href="#">
+        <li class="lots__item-picture">
             <article class="lots__article">
-              <img src="images/card-lot-03.jpg" alt="Абстракции">
+                <div class="overlay"></div>
+<!--              <img src="images/card-lot-03.jpg" alt="Абстракции">-->
               <h3 class="lots__card-title">Картина, которую повторит даже 5-летний сын маминой подруги</h3>
               <p class="lots__card-text">
                 Ну действительно, там линия, тут кружочек, а здесь и вовсе что-то похожее
@@ -103,15 +102,14 @@
                 поставили, если бы не знали, что это — одна из революционных работ Кандинского?
               </p>
             </article>
-          </a>
         </li>
       </ul>
-      <a class="lots__more-card" href="/">Посмотреть больше</a>
+      <a class="lots__more-card" href="#">Посмотреть больше</a>
     </section>
 <!--    Об аукционе-->
     <section class="main__about">
       <div class="about__column-one">
-        <img src="images/logo-white.svg">
+        <img src="images/logo-white.svg" style="width: 148px; height: 114px; margin: 64px 45px 62px 46px;">
       </div>
       <div class="about__column-two">
         <h2 class="about__title">Об аукционе</h2>
@@ -134,18 +132,18 @@
     </section>
   </main>
 <!--  Футер-->
-  <footer>
+  <footer class="footer">
 <!--    Адреса, номер телефона и почта -->
     <address class="footer__address">
       <ul>
         <li>
-          <a class="footer__menu-adress" href="#">+9 999 555 5555</a>
+          <a class="footer__menu-adress" href="tel:+99995555555">+9 999 555 5555</a>
         </li>
         <li>
-          <a class="footer__menu-adress" href="#">info@sobaka.ge</a>
+          <a class="footer__menu-adress" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
         </li>
         <li>
-          <p class="footer__menu-adress">наб. Принсенграхт 263-265, Амстердам</p>
+          <p class="footer__menu-adress">наб. Принсенграхт 263-265,<br> Амстердам</p>
         </li>
       </ul>
     </address>
@@ -163,7 +161,19 @@
         </li>
       </ul>
     </nav>
-    
+    <div class="footer__social">
+      <ul class="social__list">
+        <li class="social__youtube">
+          <img src="images/yt.svg">
+        </li>
+        <li class="social__vk">
+          <img src="images/vk.svg">
+        </li>
+        <li class="social__pinterest">
+          <img src="images/pinterest.svg">
+        </li>
+      </ul>
+    </div>
   </footer>
   </body>
 </html>
