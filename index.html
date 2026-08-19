@@ -15,30 +15,32 @@
 <!--      В хедере делаем список из ссылок -->
       <ul class="menu__item">
         <li >
-          <a class="header__menu-item" href="#">главная</a>
+          <a class="list__menu-item" href="#">главная</a>
         </li>
         <li>
-          <a class="header__menu-item" href="#">посмотреть лоты</a>
+          <a class="list__menu-item" href="#">посмотреть лоты</a>
         </li>
         <li>
-          <a class="header__menu-item">об аукционе</a>
+          <a class="list__menu-item"href="#">об аукционе</a>
         </li>
       </ul>
 <!--      Логотип сайта в хедере-->
       <div class="header__logo">
+        <a href="#">
         <img src="images/logo-black.svg">
+        </a>
       </div>
 <!--      В хедере блок с телефоно, почтой и адресом -->
-      <address class="header__address">
+      <address class="address">
         <ul class="address__list">
           <li>
-            <a class="footer__menu-adress" href="tel:+99995555555">+9 999 555 5555</a>
+            <a class="address__list-item" href="tel:+99995555555">+9 999 555 5555</a>
           </li>
           <li>
-            <a class="footer__menu-adress" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+            <a class="address__list-item" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
           </li>
           <li>
-            <p class="footer__menu-adress">наб. Принсенграхт 263-265, Амстердам</p>
+            <p> наб. Принсенграхт 263-<br>265, Амстердам</p>
           </li>
         </ul>
       </address>
@@ -56,7 +58,7 @@
       <!--      Нижняя надпись + кнопка-->
         <div class="description">
           <p class="description__abzac">Аукцион вещей. в которые никто не верил</p>
-          <button class="description__button">Сделать ставку</button>
+          <button type="submit" class="description__button">Сделать ставку</button> <!-- использую submit, так как она пока никуда не ведет -->
         </div>
       </div>
     </section>
@@ -65,7 +67,7 @@
       <h2 class="lots__title">Лоты</h2>
 <!--      Лот 1-->
       <ul class="lots__list">
-        <li class="lots__item-film">
+        <li class="lots__item-film card">
             <article class="lots__article">
                 <div class="overlay"></div>
 <!--              <img src="images/card-lot-01.jpg" alt="Девушка держит зеркало пока парень расчесывается">-->
@@ -77,7 +79,7 @@
             </article>
         </li>
 <!--        Лот 2-->
-        <li class="lots__item-book">
+        <li class="lots__item-book card">
             <article class="lots__article">
                 <div class="overlay"></div>
 <!--              <img src="images/card-lot-02.jpg" alt="Обложка книги джеймс Джойса 'Иностранка' ">-->
@@ -91,7 +93,7 @@
             </article>
         </li>
 <!--        Лот 3-->
-        <li class="lots__item-picture">
+        <li class="lots__item-picture card">
             <article class="lots__article">
                 <div class="overlay"></div>
 <!--              <img src="images/card-lot-03.jpg" alt="Абстракции">-->
@@ -108,10 +110,10 @@
     </section>
 <!--    Об аукционе-->
     <section class="main__about">
-      <div class="about__column-one">
-        <img src="images/logo-white.svg" style="width: 148px; height: 114px; margin: 64px 45px 62px 46px;">
+      <div class="about__column-white-logo">
+        <img class="white__logo" src="images/logo-white.svg" alt="Логотип белового цвета в черном круге с надписью 'оно тебе надо'">
       </div>
-      <div class="about__column-two">
+      <div class="about__column">
         <h2 class="about__title">Об аукционе</h2>
         <div class="about__text">
           <p>
@@ -134,16 +136,16 @@
 <!--  Футер-->
   <footer class="footer">
 <!--    Адреса, номер телефона и почта -->
-    <address class="footer__address">
-      <ul>
+    <address class="address address__with-indentations">
+      <ul class="address__list">
         <li>
-          <a class="footer__menu-adress" href="tel:+99995555555">+9 999 555 5555</a>
+          <a class="address__list-item" href="tel:+99995555555">+9 999 555 5555</a>
         </li>
         <li>
-          <a class="footer__menu-adress" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
+          <a class="address__list-item" href="mailto:info@sobaka.ge">info@sobaka.ge</a>
         </li>
         <li>
-          <p class="footer__menu-adress">наб. Принсенграхт 263-265,<br> Амстердам</p>
+          <p>наб. Принсенграхт 263-265,<br> Амстердам</p>
         </li>
       </ul>
     </address>
@@ -151,29 +153,33 @@
     <nav class="footer__nav">
       <ul class="footer__nav-menu">
         <li class="footer__nav-menu-item">
-          <a href="#">Главная</a>
+          <a class="list__menu-item" href="#">главная</a>
         </li>
         <li class="footer__nav-menu-item">
-          <a href="#">посмотреть лоты</a>
+          <a class="list__menu-item" href="#">посмотреть лоты</a>
         </li>
         <li class="footer__nav-menu-item">
-          <a href="#">об аукционе</a>
+          <a class="list__menu-item" href="#">об аукционе</a>
         </li>
       </ul>
     </nav>
-    <div class="footer__social">
-      <ul class="social__list">
-        <li class="social__youtube">
-          <img src="images/yt.svg">
-        </li>
-        <li class="social__vk">
-          <img src="images/vk.svg">
-        </li>
-        <li class="social__pinterest">
-          <img src="images/pinterest.svg">
-        </li>
-      </ul>
-    </div>
+    <ul class="social__list">
+      <li class="social">
+        <a href="#">
+        <img src="images/yt.svg" alt="Иконка Ютуб">
+        </a>
+      </li>
+      <li class="social">
+        <a href="#">
+        <img src="images/vk.svg" alt="Иконка ВК">
+        </a>
+      </li>
+      <li class="social">
+        <a href="#">
+        <img src="images/pinterest.svg" alt="Иконка Пинтерест">
+        </a>
+      </li>
+    </ul>
   </footer>
   </body>
 <!--Публичная третья-->

@@ -1,10 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 header {
-    height: 293px;
+    padding: 94px 50px 94px 0px; /* заменили height на padding сверху/снизу */
     width: 1100px;
     place-content: center space-between;
 }
@@ -27,8 +23,14 @@ ul li:first-child {
     list-style-type: none;
 }
 
-.header__menu-item {
+.list__menu-item {
     text-decoration: underline;
+}
+
+/*Исправил и сделал так чтобы активные ссылки */
+/*не подчеркивались при наведении курсора */
+.list__menu-item:hover {
+    text-decoration: none;
 }
 
 .header__logo {
@@ -36,15 +38,30 @@ ul li:first-child {
     height: 105px;
     width: 148px;
 }
-.header__address {
+ 
+/*относится к хедеру и к футеру */
+.address {
     display: flex;
     flex-direction: column;
     max-width: 240px;
     justify-self: end;
     align-items: flex-start;
+    
+    
 }
 .address__list {
     list-style: none;
+    
+}
+
+.address__list-item {
+    font-size: 18px;
+    line-height: 24px;
+    font-style: normal;
+    text-decoration: underline;
+}
+.address__list-item:hover {
+    text-decoration: none;
 }
 
 .main__cover {
@@ -62,7 +79,7 @@ ul li:first-child {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0, 0.6);
     z-index: 1;
 }
 
@@ -71,7 +88,7 @@ ul li:first-child {
 .cover__title {
     width: auto;
     color: #fff;
-    font-weight: 570;
+    font-weight: 700;
     font-size: 100px;
     line-height: 1.25;
     letter-spacing: 0.20em;
@@ -133,39 +150,27 @@ ul li:first-child {
     display: flex;
     gap: 25px;
     padding-bottom: 30px;
+    flex-wrap: wrap;
     
 }
-
-.lots__item-film {
-    
+.card {
     width: 334px;
     min-height: 596px;
-    background-image: url("../images/card-lot-01.jpg");
     background-size: cover;
     background-position: center;
     list-style: none;
     color: white;
-    
+}
+.lots__item-film {
+    background-image: url("../images/card-lot-01.jpg");
 }
 
 .lots__item-book {
-    width: 334px;
-    min-height: 596px;
     background-image: url("../images/card-lot-02.jpg");
-    background-size: cover;
-    background-position: center;
-    list-style: none;
-    color: white;
 }
 
 .lots__item-picture {
-    width: 334px;
-    min-height: 596px;
     background-image: url("../images/card-lot-03.jpg");
-    background-size: cover;
-    background-position: center;
-    list-style: none;
-    color: white;
 }
 
 .lots__article{
@@ -200,6 +205,10 @@ ul li:first-child {
 
 .lots__more-card {
     padding-left: 40px;
+    text-decoration: underline;
+}
+.lots__more-card:hover {
+    text-decoration: none;
 }
 
 .main__about {
@@ -210,7 +219,7 @@ ul li:first-child {
     
 }
 
-.about__column-one {
+.about__column-white-logo {
     width: 240px;
     height: 240px;
     border-radius: 50%;
@@ -219,7 +228,13 @@ ul li:first-child {
     margin-top: 35px;
 }
 
-.about__column-two {
+.white__logo {
+    width: 148px; 
+    height: 114px; 
+    margin: 64px 45px 62px 46px;
+}
+
+.about__column {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,17 +264,12 @@ ul li:first-child {
     height: 180px;
     justify-items: center;   
     align-items: start;
-    
-}
-.footer__address ul {
-    display: flex;
-    flex-direction: column;
-    align-items: start;   /* центрирует строки телефона/почты/адреса относительно друг друга */
-    list-style: none;
 }
 
-.footer__nav {
-   
+.address__with-indentations {
+    display: flex;
+    justify-self: start;
+    margin-left: 50px;
 }
 
 .footer__nav-menu {
@@ -267,9 +277,10 @@ ul li:first-child {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 50px;
 }
 
-.social__youtube,  .social__vk, .social__pinterest {
+.social {
     width: 48px;
     height: 48px;
 }
@@ -280,3 +291,6 @@ ul li:first-child {
     gap: 25px;
     align-items: center;
 }
+
+
+
